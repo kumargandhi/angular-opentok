@@ -1,0 +1,29 @@
+<div class="container-fluid" id="page-container">
+    <div class="row publisher" id="publisherDiv" #publisherDiv></div>
+    <div class="row buttons">
+        <button
+            type="button"
+            class="btn btn-primary"
+            (click)="OnStart()"
+            [disabled]="archiveStarted || archiveStopped"
+        >
+            Start
+        </button>
+        <button
+            type="button"
+            class="btn btn-danger"
+            (click)="onStop()"
+            [disabled]="!archiveStarted || archiveStopped"
+        >
+            Stop
+        </button>
+        <button
+            type="button"
+            class="btn btn-info"
+            (click)="onView()"
+            [disabled]="!archiveStopped"
+        >
+            View
+        </button>
+    </div>
+</div>

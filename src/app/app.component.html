@@ -1,0 +1,26 @@
+<div class="main-container">
+    <h5>Opentok sample in angular</h5>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a
+                class="nav-link"
+                aria-current="page"
+                routerLink="basic-video-chat"
+                [routerLinkActive]="'active'"
+                >Video Chat</a
+            >
+        </li>
+        <li class="nav-item">
+            <a
+                class="nav-link"
+                aria-current="page"
+                routerLink="archiving"
+                [routerLinkActive]="'active'"
+                >Archiving</a
+            >
+        </li>
+    </ul>
+    <div class="router-container">
+        <router-outlet></router-outlet>
+    </div>
+</div>

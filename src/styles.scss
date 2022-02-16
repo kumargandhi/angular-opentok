@@ -1,0 +1,50 @@
+@import './node_modules/bootstrap/scss/bootstrap';
+
+:root {
+    --theme-color-primary: #95c217;
+    --panel-background: #f4f7fa;
+    --panel-header-background: #dde5eb;
+
+    // Gray color variables
+    --theme-gray-darker: #333; //night
+    --theme-gray-dark: #666; //acadia
+    --theme-gray-base: #c3c3c3; //silver
+    --theme-gray: #ededed; //whitesmoke
+    --theme-gray-light: #f5f5f5; //whitesand
+    --theme-gray-lighter: #f9f9f9; //alabaster
+}
+
+html,
+body {
+    margin: 0;
+    overflow: hidden;
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+//This is the main application container ID, includes the application header
+#page-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 15px 15px 15px 15px;
+    height: calc(100vh - 64px);
+    overflow-y: scroll;
+    background: var(--theme-gray-light);
+
+    & > #page-title {
+        background-color: inherit;
+        color: var(--theme-gray-dark);
+        margin: 0 !important;
+        padding-bottom: 10px;
+        line-height: 16px;
+    }
+
+    & > #page-desc {
+        font-size: 1rem;
+        color: var(--theme-gray-dark);
+        line-height: 14px;
+    }
+}
